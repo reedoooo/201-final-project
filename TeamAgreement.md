@@ -1,4 +1,4 @@
-# 201-final-project
+# 201-Final-Project
 The final project in Code 201
 
 ## Authors: Reed Vogt, Jason Adams, Kawika Miller
@@ -111,3 +111,4 @@ Describe at least:
     - At the very least, we will merge our working branches to the development branch if the tasks have been successfully completed otherwise we will put that off until later.
   - *How will you communicate that it’s time to merge?* 
     - If everyone’s tasks have been completed successfully &/o if the other team members need those files in order to move forward then we will merge our branches.
+    - 
