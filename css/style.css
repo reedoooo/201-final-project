@@ -88,7 +88,7 @@ nav a {
 }
 
 .folder:before {
-    content: 'Project1';
+    content: '';
     color:#C1EDCC;
     text-align: center;
     width: 50%;

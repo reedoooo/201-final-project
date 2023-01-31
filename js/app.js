@@ -18,10 +18,11 @@ let state = {
     ],
 }
 
-function saveAllToLocalStorage () {
+function saveAllToLocalStorage() {
     localStorage.setItem('portfolioState', JSON.stringify(state));
 }
 
-function retrieveAllFromLocalStorage () {
+function retrieveAllFromLocalStorage() {
     state = JSON.parse(localStorage.getItem('portfolioState'));
 }
+
