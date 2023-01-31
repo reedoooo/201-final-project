@@ -11,27 +11,26 @@
     <title>Login Page</title>
 </head>
 
-<body>
+<body id="body-div">
     <header>
 
     </header>
     <main>
-        <form>
+        <form id="submit-button">
             <fieldset>
-                <legend>
+                <legend id = "legend-div">
                     <div id="login-form">
                         <div>
                             <label for="first-name">First Name</label>
-                            <input type="text" name="name" value="type here">
+                            <input type="text" id="firstName" name="name" value="type here">
                         </div>
-                        <div>
-                            <input type="submit" name="submit" value="choose">
+                        <div id="light-dark-boxes">
+                            <input type="submit" id="login-submit" name="submit" value="choose">
                             <label for="light-or-dark">Light</label>
-                            <input type="radio" name="light" value="yes" unchecked>
+                            <input type="radio" id="light" name="form" value="light" unchecked>
                             <label for="light-or-dark">Dark</label>
-                            <input type="radio" name="dark" value="no" unchecked>
+                            <input type="radio" id="dark" name="form" value="dark" unchecked>
                         </div>
-                        <label></label>
                     </div>
                 </legend>
             </fieldset>

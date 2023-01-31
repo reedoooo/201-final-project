@@ -1,4 +1,167 @@
 body{
     background-color: #453F3C;
-    
+}
+
+.left {
+    float: left;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-shape {
+    width: 50px;
+    height: 50px;
+    background-color: #797270;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #C1EDCC;
+  }
+
+  .logo-div {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #797270;
+    position: relative;
+  }
+
+#nav-div {
+    display: flex;
+    flex-direction: column;
+    width:250px;
+    height:1000px;
+    border-right: .1rem solid ivory;
+    background-color:rgba(20, 19, 18, 0.5);
+    margin-right: auto;
+}
+
+nav {
+    display:flex;
+    flex-direction: column;
+    justify-content: left;   
+}
+
+nav ul {
+    width:100%;
+}
+
+nav ul li {
+    list-style-type: none;
+    justify-content: space-around;
+    padding: 5%;
+    text-align: center;
+    border-bottom:  solid ivory;
+    color:#C1EDCC;
+}
+
+nav ul li:hover {
+    background-color: #797270;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.folderRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.folder {
+    width: 150px;
+    height: 105px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    background-color: #797270;
+    border-radius: 0 6px 6px 6px;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59);
+}
+
+.folder:before {
+    content: 'Project1';
+    color:#C1EDCC;
+    text-align: center;
+    width: 50%;
+    height: 12px;
+    border-radius: 0 20px 0 0;
+    background-color: #797270;
+    position: absolute;
+    top: -12px;
+    left: 0px;
+}
+
+.folder:before:hover {
+    width: 55%;
+    height: 14px;
+    transition: 500ms ease-in-out;
+    border:thin solid white;
+}
+
+.folder:hover {
+    width: 160px;
+    height: 115px;
+    transition: 500ms ease-in-out;
+    border:thin solid white;
+}
+
+#addFolders, #deleteFolders {
+    width: 90%;
+    margin: 5% auto;
+    background-color: #797270;
+    border-radius: 6px;
+    padding: 2%;
+    box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59);
+}
+
+#addFolders legend, #deleteFolders legend {
+    color: #C1EDCC;
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+}
+
+#addFolders .formDiv, #deleteFolders .formDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+#addFolders label, #deleteFolders label {
+    color: #C1EDCC;
+    width: 30%;
+}
+
+#addFolders input[type='text'], #deleteFolders input[type='text'] {
+    width: 60%;
+    padding: 1%;
+    border-radius: 6px;
+    border: none;
+    background-color: #453F3C;
+    color: #C1EDCC;
+}
+
+#addFolders input[type='submit'], #deleteFolders input[type='submit'] {
+    width: 50%;
+    margin: 2% auto;
+    padding: 1%;
+    border-radius: 6px;
+    border: none;
+    background-color: #C1EDCC;
+    color: #453F3C;
+    cursor: pointer;
+}
+
+@page {
+    size: 5.5in 8.5in portrait;
+    margin: 20%;
 }
