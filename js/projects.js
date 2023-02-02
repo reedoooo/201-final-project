@@ -41,13 +41,19 @@ let files = event.target.folderSRC.files;
 
 let project = new Project(title, path, files);
 
+console.log(project);
+
 // project.convertFilesObjectToArray();
 
 state.projects.push(project);
 
-saveAllToLocalStorage();
+console.log(state.projects)
+
+// saveAllToLocalStorage();
 clearProjectsList();
 populateProjectsList();
+
+console.log(localStorage);
 
 }
 
@@ -55,17 +61,25 @@ function clearProjectsState(){
     state.projects = [];
 }
 
-function handleDisplayCode(event){
-    let codeEl = document.getElementById('code');
-    let webPageEl = document.getElementById('webPage');
-    // codeEl.src = state.projects[event.target.id].path;
-    // console.log(state.projects[event.target.id].files);
+let displayedCode;
 
-    // codeEl.src = state.projects[event.target.id].files[1].name;
+function handleDisplayCode(event){
+    let codeEl = document.getElementById('textblob');
+    let webPageEl = document.getElementById('webPage');
+    
+    state.projects[event.target.id].files[1].text().then((promise) => {
+        console.log(promise);
+        displayedCode = promise;
+        codeEl.innerText = displayedCode;
+        console.log(displayedCode);
+    });
+
+    
+
 }
 
 function populateProjectsList(){
-    retrieveAllFromLocalStorage();
+    // retrieveAllFromLocalStorage();
 
     for (let i = 0; i < state.projects.length; i++) {
         let folderRowEl = document.getElementById('folderRow');
@@ -73,6 +87,8 @@ function populateProjectsList(){
 
         folderButtonEl.setAttribute('class', 'folder');
         folderButtonEl.setAttribute('id', i);
+
+        folderButtonEl.style.content = state.projects[i].title;
         folderButtonEl.innerText = state.projects[i].title;
         folderButtonEl.addEventListener('click', handleDisplayCode);
 
