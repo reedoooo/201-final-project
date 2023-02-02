@@ -28,10 +28,18 @@ let state = {
 }
 
 function saveAllToLocalStorage() {
-  localStorage.setItem('portfolioState', JSON.stringify(state));
+    console.log('saving state to local storage')
+    localStorage.setItem('portfolioState', JSON.stringify(state));
 }
 
 function retrieveAllFromLocalStorage() {
-  state = JSON.parse(localStorage.getItem('portfolioState'));
+    console.log('retrieving local storage data and setting state')
+    state = JSON.parse(localStorage.getItem('portfolioState'));
 }
+
+
+// if data for local storage already exists, retrieve it. Otherwise, create the local storage object by saving the blank state object to local storage 
+if (localStorage.getItem('portfolioState')) {
+    retrieveAllFromLocalStorage();
+} else saveAllToLocalStorage();
 

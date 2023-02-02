@@ -36,13 +36,23 @@ body {
     position: relative;
 }
 
-#nav-div {
+aside {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 350px;
     height: 900px;
     border-right: .1rem solid ivory;
     background-color: rgba(20, 19, 18, 0.5);
+}
+
+#nav-div {
+    display: flex;
+    flex-direction: column;
+    width:250px;
+    /* height:100vh; */
+    /* border-right: .1rem solid ivory;
+    background-color:rgba(20, 19, 18, 0.5); */
     margin-right: auto;
 }
 
@@ -92,8 +102,8 @@ nav a {
 }
 
 .folder:before {
-    content: 'Project1';
-    color: #C1EDCC;
+    content: '';
+    color:#C1EDCC;
     text-align: center;
     width: 50%;
     height: 12px;
@@ -154,7 +164,7 @@ nav a {
 #submit-button label,
 #confirm-button label {
     color: #C1EDCC;
-    width: 30%;
+    width: 15%;
 }
 
 #addFolders input[type='text'],
@@ -183,6 +193,7 @@ nav a {
     cursor: pointer;
 }
 
+
 #light-dark-boxes {
     width: 300px;
     color: inherit;
@@ -206,4 +217,7 @@ nav a {
 
 #resume-input {
     margin: 15px;
+
+#addFolders input[type='file'] {
+    width: 81.5%;
 }
