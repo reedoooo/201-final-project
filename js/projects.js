@@ -2,6 +2,7 @@
 
 // let displayedCode;
 
+
 function Code(name, text) {
   this.name = name;
   this.text = text;
@@ -115,6 +116,7 @@ function clearProjectsList() {
     folderRowEl.removeChild(folderRowEl.lastChild);
   }
 }
+
 
 let addProjectEl = document.getElementById('addFolders');
 addProjectEl.addEventListener('submit', addProjectToState);

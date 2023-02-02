@@ -1,8 +1,9 @@
 {
     "extends": "eslint:recommended",
     "parserOptions": {
-      "sourceType":"module",
       "ecmaVersion": 6,
+      "sourceType": "module",
+      "allowImportExportEverywhere": true,
       "ecmaFeatures": {
         "impliedStrict": true
       }

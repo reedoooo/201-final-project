@@ -1,13 +1,13 @@
 'use strict';
 
-import setTheme from './login.js';
+// import setTheme from './login';
 
-window.addEventListener('load', function () {
-  let savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    setTheme(savedTheme);
-  }
-});
+// window.addEventListener('load', function () {
+//   let savedTheme = localStorage.getItem('theme');
+//   if (savedTheme) {
+//     setTheme(savedTheme);
+//   }
+// });
 
 let state = {
   projects: [],
@@ -38,7 +38,7 @@ function retrieveAllFromLocalStorage() {
 }
 
 
-// if data for local storage already exists, retrieve it. Otherwise, create the local storage object by saving the blank state object to local storage 
+// if data for local storage already exists, retrieve it. Otherwise, create the local storage object by saving the blank state object to local storage
 if (localStorage.getItem('portfolioState')) {
   retrieveAllFromLocalStorage();
 } else saveAllToLocalStorage();
