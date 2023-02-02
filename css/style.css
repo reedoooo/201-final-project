@@ -153,12 +153,13 @@ nav a {
     margin-bottom: 2%;
 }
 
-#addFolders #formDiv,
-#deleteFolders #formDiv,
-#submit-button #formDiv,
-#confirm-button #formDiv {
+#addFolders #formDiv1 #formDiv2 #formDiv3,
+#deleteFolders #formDiv4,
+#submit-button #formDiv5,
+#confirm-button #formDiv0 {
     display: flex;
     justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 2%;
 

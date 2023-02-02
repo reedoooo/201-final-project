@@ -57,9 +57,9 @@ function setTheme(theme) {
       document.getElementById('body-div').style.backgroundColor = lightArray[8];
       document.getElementById('body-div').style.color = lightArray[1];
     }
-    if (document.getElementById('formDiv')) {
-      document.getElementById('formDiv').style.backgroundColor = lightArray[2];
-    }
+    // if (document.getElementById('formDiv')) {
+    //   document.getElementById('formDiv').style.backgroundColor = lightArray[2];
+    // }
     // if (document.getElementById('name').firstElementChild) {
     //   console.log('child');
     //   document.getElementById('name').firstElementChild.style.backgroundColor = lightArray[1];
@@ -102,16 +102,26 @@ function setTheme(theme) {
     // if (document.getElementById('folder')) {
     //   document.getElementById('folder').style.backgroundColor = lightArray[2];
     // }
+
     if (document.getElementById('html-id')) {
       document.getElementById('html-id').style.backgroundColor = lightArray[8];
     } else if (theme === 'dark') {
       document.getElementById('html-id').style.backgroundColor = darkArray[0];
     }
 
-    for (let i = 1; i < 6; i++) {
+    for (let i = 1; i < 7; i++) {
       if (document.getElementById(`label-form${i}`)) {
         document.getElementById(`label-form${i}`).style.color = lightArray[4];
         console.log('test5');
+      }
+    }
+    for (let i = 0; i < 7; i++) {
+      if (document.getElementById(`formDiv${i}`)) {
+        document.getElementById(`formDiv${i}`).style.color = lightArray[4];
+        console.log('test5');
+      }
+      if (document.getElementById('formDiv')) {
+        document.getElementById('formDiv').style.backgroundColor = lightArray[2];
       }
     }
 
@@ -138,11 +148,11 @@ function setTheme(theme) {
       }
 
     }
-    for (let i = 1; i < 10; i++) {
-      if (document.getElementById(`folder${i}`)) {
-        document.getElementById(`folder${i}`).style.backgroundColor = lightArray[2];
-        document.getElementById(`folder${i}`).style.borderColor = lightArray[10];
-        document.getElementById(`folder${i}`).style.backgroundColor = lightArray[10];
+    for (let i = 0; i < 7; i++) {
+      if (document.getElementById(`${i}`)) {
+        document.getElementById(`${i}`).style.backgroundColor = lightArray[2];
+        document.getElementById(`${i}`).style.borderColor = lightArray[10];
+        document.getElementById(`${i}`).style.backgroundColor = lightArray[10];
         console.log('test4');
       }
     }
@@ -194,5 +204,5 @@ function setTheme(theme) {
   }
 })();
 
-module.exports = setTheme;
+// module.exports = setTheme;
 
