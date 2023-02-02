@@ -33,3 +33,4 @@ function retrieveAllFromLocalStorage() {
 if (localStorage.getItem('portfolioState')) {
     retrieveAllFromLocalStorage();
 } else saveAllToLocalStorage();
+
