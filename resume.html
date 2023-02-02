@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="./js/login.js"></script>
 </head>
 
 <body id="body-div">
@@ -19,49 +20,54 @@
 
         </header>
 
-        <main id="main-div">
+        <main>
             <aside class="left">
                 <section id="nav-div">
                     <section class="logo">
                         <div class="logo-shape"></div>
-                        <div class="logo-text">Coding Progress</div>
+                        <div class="logo-text" id="logo-id">Coding Progress</div>
                     </section>
                     <nav>
                         <ul>
-                            <a href="index.html">
-                                <li>Home</li>
+                            <a href="login.html">
+                                <li id="li1">Home</li>
                             </a>
                             <a href="index.html">
-                                <li>Projects</li>
+                                <li id="li2">Projects</li>
                             </a>
                             <a href="notes.html">
-                                <li>Notes</li>
+                                <li id="li3">Notes</li>
                             </a>
                             <a href="links.html">
-                                <li>Coding Resources</li>
+                                <li id="li4">Coding Resources</li>
                             </a>
                             <a href="resume.html">
-                                <li>Resume</li>
+                                <li id="li5">Resume</li>
+                            </a>
+                            <a href="about.html">
+                                <li id="li6">About Us</li>
                             </a>
                         </ul>
                     </nav>
+                    <form id="addResume">
+                        <fieldset id="fieldset-id4">
+                            <legend id="legend-div4">
+                                <div id="resume-form">
+                                    <div id="formDiv6">
+                                        <label for="myfile" id="label-form7">Upload Resume:</label>
+                                        <input type="file" id="pdfFileInput" value="Choose" />
+                                    </div>
+                                </div>
+                            </legend>
+                        </fieldset>
+                    </form>
                 </section>
             </aside>
             <div id="flex-container">
                 <div id="resume-div">
                     <div id="pdfViewer">
-                        <iframe id="pdf-js-viewer" src="/web/viewer.html?file=reed-resume.pdf" title="webviewer"
-                            frameborder="0" width="500" height="600"></iframe>
-                    </div>
-                    <div id="resume-input">
-                        <form id="resume-form">
-                            <legend>
-                                <fieldset>
-                                    <label for="myfile">Upload Resume: </label>
-                                    <input type="file" id="pdfFileInput" /><br />
-                                </fieldset>
-                            </legend>
-                        </form>
+                        <!-- <iframe id="pdf-js-viewer" src="/web/viewer.html?file=reed-resume.pdf" title="webviewer"
+                            frameborder="0" width="500" height="600"></iframe> -->
                     </div>
                 </div>
             </div>
@@ -72,7 +78,7 @@
         </footer>
 
         <script src="js/resume.js" type="text/javascript"></script>
-        
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.3.122/pdf.min.js"
             integrity="sha512-CGtesFWoCAxW8xV1S4wdev6uWmGhkEBtTGJsQLkT75ab0eVyx0RTOdGxHk9hFVV/OlF6ZyCoukfPdiZPpAiUtw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
