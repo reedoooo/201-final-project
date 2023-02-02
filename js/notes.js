@@ -17,11 +17,21 @@ function saveNoteToState (savedNote) {
     }
     // updates local storage with new information; called from app.js
     saveAllToLocalStorage();
+    clearNoteButtonContainer();
+    renderNotesButtons();
     
 }
 
 function loadNoteFromState () {
 
+}
+
+function clearNoteButtonContainer () {
+    let scrollEl = document.getElementById('notesButtonScroll');
+
+    for (let i = 0; scrollEl.childNodes.length > 0; i++) {
+        scrollEl.removeChild(scrollEl.lastChild);
+    }
 }
 
 
@@ -30,23 +40,32 @@ function renderNote (event) {
     let textAreaEl = document.getElementById('noteText');
     let titleEl = document.getElementById('noteTitle');
 
-    console.log(state.notes[event.target.id].text);
+    console.log(state.notes[event.target.id].title, state.notes[event.target.id].text)
     titleEl.value = state.notes[event.target.id].title;
     textAreaEl.innerText = state.notes[event.target.id].text;
 }
 
 function renderNotesButtons () {
-    let scrollEl = document.getElementById('notesButtonScroll')
+    let scrollEl = document.getElementById('notesButtonScroll');
+
+    // if (scrollEl.hasChildNodes) {
+    //     clearNoteButtonContainer();
+    // }
+    console.log(scrollEl.childNodes);
 
     state.notes.forEach(note => {
         // create buttons for each note in the state.notes array
         let containerEl = document.createElement('div');
         let buttonEl = document.createElement('button');
+        let removeEl = document.createElement('button');
+
+        // 'id' attribute values correspond to the index position of each note in state.notes
+        containerEl.setAttribute('class', 'scroll button container');
         buttonEl.innerText = note.title;
         buttonEl.setAttribute('id', state.notes.indexOf(note));
-        let removeEl = document.createElement('button');
         removeEl.innerText = '-';
-        removeEl.setAttribute('id', 'removeNote');
+        removeEl.setAttribute('id', state.notes.indexOf(note));
+
         // add event listeners to each button
         buttonEl.addEventListener('click', renderNote);
         removeEl.addEventListener('click', handleRemoveNote);
@@ -56,6 +75,8 @@ function renderNotesButtons () {
 
         scrollEl.appendChild(containerEl);
     });
+
+    
 }
 
 function handleSaveNote (event) {
@@ -66,6 +87,13 @@ function handleSaveNote (event) {
 
 function handleRemoveNote (event) {
     event.preventDefault();
+    // console.log(state.notes[event.target.id]);
+    state.notes.splice(event.target.id, 1);
+    console.log(state.notes);
+    saveAllToLocalStorage();
+    clearNoteButtonContainer();
+    renderNotesButtons();
+
 }
 
 
