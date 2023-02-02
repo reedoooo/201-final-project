@@ -1,5 +1,8 @@
-body{
+body {
     background-color: #453F3C;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
 .left {
@@ -9,48 +12,48 @@ body{
 .logo {
     display: flex;
     align-items: center;
-  }
-  
-  .logo-shape {
+}
+
+.logo-shape {
     width: 50px;
     height: 50px;
     background-color: #797270;
     border-radius: 50%;
     margin-right: 10px;
-  }
-  
-  .logo-text {
+}
+
+.logo-text {
     font-size: 20px;
     font-weight: bold;
     color: #C1EDCC;
-  }
+}
 
-  .logo-div {
+.logo-div {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: #797270;
     position: relative;
-  }
+}
 
 #nav-div {
     display: flex;
     flex-direction: column;
-    width:250px;
-    height:1000px;
+    width: 350px;
+    height: 900px;
     border-right: .1rem solid ivory;
-    background-color:rgba(20, 19, 18, 0.5);
+    background-color: rgba(20, 19, 18, 0.5);
     margin-right: auto;
 }
 
 nav {
-    display:flex;
+    display: flex;
     flex-direction: column;
-    justify-content: left;   
+    justify-content: left;
 }
 
 nav ul {
-    width:100%;
+    width: 100%;
 }
 
 nav ul li {
@@ -58,8 +61,8 @@ nav ul li {
     justify-content: space-around;
     padding: 5%;
     text-align: center;
-    border-bottom:  solid ivory;
-    color:#C1EDCC;
+    border-bottom: solid ivory;
+    color: #C1EDCC;
 }
 
 nav ul li:hover {
@@ -76,6 +79,7 @@ nav a {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .folder {
     width: 150px;
     height: 105px;
@@ -89,7 +93,7 @@ nav a {
 
 .folder:before {
     content: 'Project1';
-    color:#C1EDCC;
+    color: #C1EDCC;
     text-align: center;
     width: 50%;
     height: 12px;
@@ -104,17 +108,19 @@ nav a {
     width: 55%;
     height: 14px;
     transition: 500ms ease-in-out;
-    border:thin solid white;
+    border: thin solid white;
 }
 
 .folder:hover {
     width: 160px;
     height: 115px;
     transition: 500ms ease-in-out;
-    border:thin solid white;
+    border: thin solid white;
 }
 
-#addFolders, #deleteFolders {
+#addFolders,
+#deleteFolders,
+#submit-button {
     width: 90%;
     margin: 5% auto;
     background-color: #797270;
@@ -123,25 +129,38 @@ nav a {
     box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59);
 }
 
-#addFolders legend, #deleteFolders legend {
+#addFolders legend,
+#deleteFolders legend,
+#submit-button legend,
+#confirm-button legend {
     color: #C1EDCC;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 2%;
 }
 
-#addFolders .formDiv, #deleteFolders .formDiv {
+#addFolders #formDiv,
+#deleteFolders #formDiv,
+#submit-button #formDiv,
+#confirm-button #formDiv {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2%;
+
 }
 
-#addFolders label, #deleteFolders label {
+#addFolders label,
+#deleteFolders label,
+#submit-button label,
+#confirm-button label {
     color: #C1EDCC;
     width: 30%;
 }
 
-#addFolders input[type='text'], #deleteFolders input[type='text'] {
+#addFolders input[type='text'],
+#deleteFolders input[type='text'],
+#submit-button input[type='text'],
+#confirm-button input[type='text'] {
     width: 60%;
     padding: 1%;
     border-radius: 6px;
@@ -150,8 +169,11 @@ nav a {
     color: #C1EDCC;
 }
 
-#addFolders input[type='submit'], #deleteFolders input[type='submit'] {
-    width: 50%;
+#addFolders input[type='submit'],
+#deleteFolders input[type='submit'],
+#submit-button input[type='submit'],
+#confirm-button input[type='click'] {
+    width: 40%;
     margin: 2% auto;
     padding: 1%;
     border-radius: 6px;
@@ -161,7 +183,27 @@ nav a {
     cursor: pointer;
 }
 
-@page {
-    size: 5.5in 8.5in portrait;
-    margin: 20%;
+#light-dark-boxes {
+    width: 300px;
+    color: inherit;
+}
+
+#flex-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#resume-div {}
+
+
+#pdfViewer {
+    margin: 15px;
+}
+
+#resume-input {
+    margin: 15px;
 }
