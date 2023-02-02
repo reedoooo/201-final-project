@@ -1,15 +1,11 @@
 'use strict'
 
-// function File (name, size, type, webkitRelativePath) {
-//     this.name = name;
-//     this.size = size;
-//     this.type = type;
-//     this.webkitRelativePath = webkitRelativePath;
-// }
+// let displayedCode;
 
-// function Folder () {
-//     this.files = {};
-// }
+function Code(name, text) {
+    this.name = name;
+    this.text = text;
+}
 
 function Project(title, path, files) {
     this.title = title;
@@ -19,63 +15,79 @@ function Project(title, path, files) {
     this.fileSize = 0;
 }
 
-Project.prototype.convertFilesObjectToArray = function () {
-    // console.log(this.files)
-    // let newFiles = [];
-    // for (let i = 0; i < this.files.length; i++) {
-    //     // console.log(this.files[i].name);
-    //     let newFile = new File (this.files[i].name, this.files[i].size, this.files[i].type, this.files[i].webkitRelativePath);
-    //     newFiles.push(newFile);
-    // }
-    // this.files = newFiles;
-    // console.log(this.files);
-}
+Project.prototype.parseFiles = function () {
+    let newFiles = [];
 
+    for (let i = 0; i < this.files.length; i++) {
+        let elementName = this.files[i].name;
+        if (elementName.slice(-3) === '.js' || elementName.slice(-4) === '.css' || elementName.slice(-5) === '.html') {
+            this.files[i].text().then((promise) => {
+                let code = new Code(elementName, promise);
+                newFiles.push(code);
+            });
+        }
+    };
+    this.files = newFiles;
+}
 
 function addProjectToState(event) {
 event.preventDefault();
 
 let title = event.target.title.value;
-let path = event.target.folderSRC.value;
+let path = event.target.deployedPage.value;
 let files = event.target.folderSRC.files;
 
 let project = new Project(title, path, files);
 
-console.log(project);
-
-// project.convertFilesObjectToArray();
+project.parseFiles();
 
 state.projects.push(project);
 
-console.log(state.projects)
-
-// saveAllToLocalStorage();
+setTimeout(saveAllToLocalStorage, 500);
+console.log('firing now');
 clearProjectsList();
 populateProjectsList();
 
-console.log(localStorage);
-
+document.getElementById('addFolders').reset();
 }
 
 function clearProjectsState(){
     state.projects = [];
 }
 
-let displayedCode;
+function createProjectFilesNavButtons(event) {
+    let project = state.projects[event.target.id];
+    let containerEl = document.getElementById('projectFileNavContainer');
+    let titleEl = document.createElement('h4');
+
+    for (let i = 0; i < containerEl.childNodes.length; i++) {
+        containerEl.removeChild(containerEl.lastChild);
+    }
+
+    titleEl.innerText = `View ${project.title} Files`;
+    containerEl.appendChild(titleEl);
+
+    project.files.forEach(element => {
+        let buttonEl = document.createElement('button');
+        buttonEl.innerText = element.name;
+        buttonEl.setAttribute('id', project.files.indexOf(element));
+
+        buttonEl.addEventListener('click', function () {
+            document.getElementById('textblob').innerText = element.text;
+        })
+
+        containerEl.appendChild(buttonEl);
+    });
+}
 
 function handleDisplayCode(event){
     let codeEl = document.getElementById('textblob');
     let webPageEl = document.getElementById('webPage');
     
-    state.projects[event.target.id].files[1].text().then((promise) => {
-        console.log(promise);
-        displayedCode = promise;
-        codeEl.innerText = displayedCode;
-        console.log(displayedCode);
-    });
+    codeEl.innerText = state.projects[event.target.id].files[0].text;
+    webPageEl.src = state.projects[event.target.id].path;
 
-    
-
+    createProjectFilesNavButtons(event);
 }
 
 function populateProjectsList(){

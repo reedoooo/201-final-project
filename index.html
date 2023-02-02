@@ -38,17 +38,23 @@
                         </nav>
                         <form id='addFolders'>
                             <fieldset>
-                                <legend>Add a New Project Folder</legend>
+                                <legend>Add Project Folder</legend>
 
                                 <section class='formDiv'>
-                                    <label for='title'>Project Title: </label>
-                                    <input type='text' id="title" name="title" required>
+                                    <label for='title'>Title: </label>
+                                    <input type='text' id="title" name="title" placeholder="Title of Project" required>
                                 </section>
 
                                 <section class='formDiv'>
                                     <label for='folderSRC'>URL: </label>
+                                    <input type='text' id="deployedPage" name="deployedPage" placeholder="Deployed page URL" required>
+                                </section>
+
+                                <section class='formDiv'>
+                                    <label for='folderSRC'>Files: </label>
                                     <input type='file' id="projectPath" name="folderSRC" webkitdirectory multiple required>
                                 </section>
+
 
                                 <input id='addFolder' type="submit" value="Add Folder">
                             </fieldset>
@@ -58,7 +64,7 @@
                                 <legend>Delete Folders</legend>
 
                                 <section class='formDiv'>
-                                    <label for='folderName'>Folder Name: </label>
+                                    <label for='folderName'>Title: </label>
                                     <input type='text' id="name" required>
                                 </section>
 
@@ -66,14 +72,17 @@
                             </fieldset>
                         </form>
                     </section>
+                    <section id="projectFileNavContainer">
+
+                    </section>
                 </aside>
                 <section class="folderRow" id="folderRow">
                     <!-- populateProjectsList from projects.js will fill this with folder buttons -->
                 </section>
 
                 <div id="iframebox">
-                    <div id="textblob"></div>
-                    <iframe src="https://kmartwork.github.io/cookie-stand/" style="height:85vh; width:42vw;" id="webPage" title="Iframe Example"></iframe>
+                    <div id="textblob">Your file text will appear here</div>
+                    <iframe src="" id="webPage" title="Iframe Example"></iframe>
                 </div>
             </main>
         
