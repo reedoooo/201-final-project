@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="css/style.css">
         <script type="text/javascript" src="./js/login.js"></script>
 
+
+        <link rel="stylesheet" href="css/notes.css">
+
     </head>
     <body>
         <section id="body-div">
@@ -50,7 +53,7 @@
                                 </a>
                             </ul>
                         </nav>
-                        <form id='addFolders'>
+                        <!-- <form id='addFolders'>
                             <fieldset>
                                 <legend>Add a New Project Folder</legend>
 
@@ -78,21 +81,25 @@
 
                                 <input id='deleteFolder' type="submit" value="Delete Folder">
                             </fieldset>
-                        </form>
+                        </form> -->
                     </section>
                 </aside>
                 <section id="notesMainContainer">
                     <!--must be no white space between opening and closing elements of '<section id=notesButtonScroll>' or else 'clearNoteButtonContainer func in notes.js will fail to work'-->
-                    <section id="notesButtonScroll"></section>
+                    <section id="notesButtonContainer">
+                        <h4>Notes</h4>
+                        <section id="notesButtonScroll"></section>
+                    </section>
                     <form id="noteDisplay">
                         <fieldset>
                             <section id="noteTitleContainer">
-                                <label for="noteTitle">Title: </label>
+                                <!-- <label for="noteTitle">Title: </label> -->
                                 <input type="text" id="noteTitle" name="noteTitle" placeholder="Title.." required />
                             </section>
-                            <textarea id="noteText" name="noteText" height="700" width="500">
+                            <textarea id="noteText" name="noteText" >
                                 <!-- text for/from each note will go here -->
                             </textarea>
+                            <br>
                             <button id="save" type="submit">Save</button>
                         </fieldset>
                     </form>

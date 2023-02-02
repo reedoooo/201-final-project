@@ -63,6 +63,7 @@ function renderNotesButtons () {
         containerEl.setAttribute('class', 'scroll button container');
         buttonEl.innerText = note.title;
         buttonEl.setAttribute('id', state.notes.indexOf(note));
+        buttonEl.setAttribute('class', 'title')
         removeEl.innerText = '-';
         removeEl.setAttribute('id', state.notes.indexOf(note));
 
