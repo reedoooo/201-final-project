@@ -17,6 +17,8 @@ function saveNoteToState (savedNote) {
     }
     // updates local storage with new information; called from app.js
     saveAllToLocalStorage();
+    clearNoteButtonContainer();
+    renderNotesButtons();
     
 }
 

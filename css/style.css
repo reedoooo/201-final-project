@@ -33,13 +33,22 @@ body{
     position: relative;
   }
 
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    border-right: .1rem solid ivory;
+    background-color:rgba(20, 19, 18, 0.5);
+}
+
 #nav-div {
     display: flex;
     flex-direction: column;
     width:250px;
-    height:1000px;
-    border-right: .1rem solid ivory;
-    background-color:rgba(20, 19, 18, 0.5);
+    /* height:100vh; */
+    /* border-right: .1rem solid ivory;
+    background-color:rgba(20, 19, 18, 0.5); */
     margin-right: auto;
 }
 
@@ -88,7 +97,7 @@ nav a {
 }
 
 .folder:before {
-    content: 'Project1';
+    content: '';
     color:#C1EDCC;
     text-align: center;
     width: 50%;
@@ -138,7 +147,7 @@ nav a {
 
 #addFolders label, #deleteFolders label {
     color: #C1EDCC;
-    width: 30%;
+    width: 15%;
 }
 
 #addFolders input[type='text'], #deleteFolders input[type='text'] {
@@ -159,6 +168,10 @@ nav a {
     background-color: #C1EDCC;
     color: #453F3C;
     cursor: pointer;
+}
+
+#addFolders input[type='file'] {
+    width: 81.5%;
 }
 
 @page {
