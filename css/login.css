@@ -1,5 +1,5 @@
-
-body{
+body {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     width: 100%;
     background-color: #453F3C;
@@ -34,6 +34,17 @@ legend {
 }
 
 #login-submit {
+    width: 25%;
+    margin: 2% auto;
+    padding: 1%;
+    border-radius: 6px;
+    border: none;
+    background-color: #C1EDCC;
+    color: #453F3C;
+    cursor: pointer;
+}
+
+#confirm-button {
     width: 25%;
     margin: 2% auto;
     padding: 1%;

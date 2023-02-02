@@ -12,16 +12,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-    <section id="body-div">
-        <div class="left">
+<body id="body-div">
+    <section>
 
-        </div>
         <header>
 
         </header>
 
-        <main>
+        <main id="main-div">
             <aside class="left">
                 <section id="nav-div">
                     <section class="logo">
@@ -49,17 +47,23 @@
                     </nav>
                 </section>
             </aside>
-            <div id="resume-div">
-                <div class="resume">
-                    <page-body>
-
-                    </page-body>
+            <div id="flex-container">
+                <div id="resume-div">
+                    <div id="pdfViewer">
+                        <iframe id="pdf-js-viewer" src="/web/viewer.html?file=reed-resume.pdf" title="webviewer"
+                            frameborder="0" width="500" height="600"></iframe>
+                    </div>
+                    <div id="resume-input">
+                        <form id="resume-form">
+                            <legend>
+                                <fieldset>
+                                    <label for="myfile">Upload Resume: </label>
+                                    <input type="file" id="pdfFileInput" /><br />
+                                </fieldset>
+                            </legend>
+                        </form>
+                    </div>
                 </div>
-                <form>
-                    <label for="myfile">Upload Resume: </label>
-                    <input type="file" id="fileInput" /><br />
-                    <img id="file-preview" />
-                </form>
             </div>
         </main>
 
@@ -68,8 +72,11 @@
         </footer>
 
         <script src="js/resume.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.3.122/pdf.min.js"
+            integrity="sha512-CGtesFWoCAxW8xV1S4wdev6uWmGhkEBtTGJsQLkT75ab0eVyx0RTOdGxHk9hFVV/OlF6ZyCoukfPdiZPpAiUtw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!--<script src="js/login.js" type="text/javascript"></script>-->
-        <script src="js/app.js" type="text/javascript"></script>
+        <!--<script src="js/app.js" type="text/javascript"></script>-->
     </section>
 </body>
 
