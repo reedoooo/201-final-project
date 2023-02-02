@@ -49,7 +49,7 @@ aside {
 #nav-div {
     display: flex;
     flex-direction: column;
-    width:250px;
+    width: 250px;
     /* height:100vh; */
     /* border-right: .1rem solid ivory;
     background-color:rgba(20, 19, 18, 0.5); */
@@ -103,7 +103,7 @@ nav a {
 
 .folder:before {
     content: '';
-    color:#C1EDCC;
+    color: #C1EDCC;
     text-align: center;
     width: 50%;
     height: 12px;
@@ -208,15 +208,13 @@ nav a {
 
 }
 
-#resume-div {}
-
-
 #pdfViewer {
     margin: 15px;
 }
 
 #resume-input {
     margin: 15px;
+}
 
 #addFolders input[type='file'] {
     width: 81.5%;
