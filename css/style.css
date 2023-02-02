@@ -49,12 +49,17 @@ aside {
 #nav-div {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    /* height:100vh; */
+    width: 350px;
+    height: 900px;
+        /* height:100vh; */
     /* border-right: .1rem solid ivory;
     background-color:rgba(20, 19, 18, 0.5); */
     margin-right: auto;
+    border-right: .1rem solid ivory;
+    margin-right: auto;
 }
+
+
 
 nav {
     display: flex;
