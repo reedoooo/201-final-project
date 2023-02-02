@@ -28,11 +28,11 @@
                         </section>
                         <nav>
                             <ul>
-                                <li>Home</li>
-                                <li>Projects in Progress</li>
-                                <li>Interests</li>
-                                <li>Coding Resources</li>
-                                <li>Resume</li>
+                                <a href="index.html"><li>Home</li></a>
+                                <a href="index.html"><li>Projects</li></a>
+                                <a href="notes.html"><li>Notes</li></a>
+                                <a href="links.html"><li>Coding Resources</li></a>
+                                <a href="resume.html"><li>Resume</li></a>
                             </ul>
                         </nav>
                         <form id='addFolders'>
@@ -67,9 +67,8 @@
                     </section>
                 </aside>
                 <section id="notesMainContainer">
-                    <section id="notesButtonScroll">
-                        <!-- buttons for selecting specific note will go here -->
-                    </section>
+                    <!--must be no white space between opening and closing elements of '<section id=notesButtonScroll>' or else 'clearNoteButtonContainer func in notes.js will fail to work'-->
+                    <section id="notesButtonScroll"></section>
                     <form id="noteDisplay">
                         <fieldset>
                             <section id="noteTitleContainer">

@@ -25,3 +25,8 @@ function saveAllToLocalStorage () {
 function retrieveAllFromLocalStorage () {
     state = JSON.parse(localStorage.getItem('portfolioState'));
 }
+
+// 'starts' here
+// saveAllToLocalStorage();
+retrieveAllFromLocalStorage();
+console.log(state);
