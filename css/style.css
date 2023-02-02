@@ -51,8 +51,8 @@ aside {
     flex-direction: column;
     width:250px;
     /* height:100vh; */
-    /* border-right: .1rem solid ivory;
-    background-color:rgba(20, 19, 18, 0.5); */
+    /* border-right: .1rem solid ivory; */
+    /* background-color:rgba(20, 19, 18, 0.5); */
     margin-right: auto;
 }
 
@@ -208,15 +208,13 @@ nav a {
 
 }
 
-#resume-div {}
-
-
 #pdfViewer {
     margin: 15px;
 }
 
 #resume-input {
     margin: 15px;
+}
 
 #addFolders input[type='file'] {
     width: 81.5%;
