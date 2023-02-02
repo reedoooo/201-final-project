@@ -47,7 +47,7 @@
 
                                 <section class='formDiv'>
                                     <label for='folderSRC'>URL: </label>
-                                    <input type='file' webkitdirectory multiple id="projectPath" name="folderSRC" required>
+                                    <input type='file' id="projectPath" name="folderSRC" webkitdirectory multiple required>
                                 </section>
 
                                 <input id='addFolder' type="submit" value="Add Folder">
@@ -70,9 +70,10 @@
                 <section class="folderRow" id="folderRow">
                     <!-- populateProjectsList from projects.js will fill this with folder buttons -->
                 </section>
+
                 <div id="iframebox">
-                    <iframe src="cooldog.jpg"  id="code" title="Iframe Example"></iframe>
-                    <iframe src="coolhorses.jpg"  id="webPage" title="Iframe Example"></iframe>
+                    <div id="textblob"></div>
+                    <iframe src="https://kmartwork.github.io/cookie-stand/" style="height:85vh; width:42vw;" id="webPage" title="Iframe Example"></iframe>
                 </div>
             </main>
         

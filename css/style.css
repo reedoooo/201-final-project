@@ -165,3 +165,8 @@ nav a {
     size: 5.5in 8.5in portrait;
     margin: 20%;
 }
+
+#textblob {
+    white-space: pre-wrap;
+    height: 90vh;
+}
