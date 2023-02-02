@@ -50,13 +50,11 @@ aside {
     display: flex;
     flex-direction: column;
     width: 350px;
-    height: 900px;
+    min-height: 900px;
     /* height:100vh; */
     /* border-right: .1rem solid ivory;
     background-color:rgba(20, 19, 18, 0.5); */
-    margin-right: auto;
     border-right: .1rem solid ivory;
-    margin-right: auto;
 }
 
 
@@ -135,7 +133,9 @@ nav a {
 
 #addFolders,
 #deleteFolders,
-#submit-button {
+#submit-button1,
+#submit-button2,
+#addResume {
     width: 90%;
     margin: 5% auto;
     background-color: #797270;
@@ -146,20 +146,25 @@ nav a {
 
 #addFolders legend,
 #deleteFolders legend,
-#submit-button legend,
-#confirm-button legend {
+#submit-button1 legend,
+#submit-button2 legend,
+#confirm-button legend,
+#addResume legend {
     color: #C1EDCC;
-    font-size: 1rem;
+    font-size: .9rem;
     margin-bottom: 2%;
 }
 
 #addFolders #formDiv1 #formDiv2 #formDiv3,
 #deleteFolders #formDiv4,
-#submit-button #formDiv5,
-#confirm-button #formDiv0 {
+#submit-button1 #formDiv7,
+#submit-button2 #formDiv5,
+#confirm-button #formDiv0,
+#addResume #formDiv6 {
     display: flex;
     justify-content: space-between;
     justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     margin-bottom: 2%;
 
@@ -167,7 +172,8 @@ nav a {
 
 #addFolders label,
 #deleteFolders label,
-#submit-button label,
+#submit-button1 label,
+#submit-button2 label,
 #confirm-button label {
     color: #C1EDCC;
     width: 15%;
@@ -176,19 +182,21 @@ nav a {
 #addFolders input[type='text'],
 #deleteFolders input[type='text'],
 #submit-button input[type='text'],
-#confirm-button input[type='text'] {
+#confirm-button input[type='text']{
     width: 60%;
     padding: 1%;
     border-radius: 6px;
     border: none;
     background-color: #453F3C;
     color: #C1EDCC;
+    margin-bottom:2px;
 }
 
 #addFolders input[type='submit'],
 #deleteFolders input[type='submit'],
-#submit-button input[type='submit'],
-#confirm-button input[type='click'] {
+#submit-button1 input[type='submit'],
+#submit-button2 input[type='submit'],
+#confirm-button input[type='click']{
     width: 40%;
     margin: 2% auto;
     padding: 1%;
@@ -200,7 +208,7 @@ nav a {
 }
 
 
-#light-dark-boxes {
+#formDiv5 {
     width: 300px;
     color: inherit;
 }
@@ -213,15 +221,53 @@ nav a {
     align-items: center;
 
 }
+#resume-div {
+}
 
 #pdfViewer {
     margin: 15px;
 }
 
-#resume-input {
+#formDiv6 {
     margin: 15px;
 }
 
+
 #addFolders input[type='file'] {
     width: 81.5%;
+}
+#label-form4 {
+    flex-grow: 1;
+    margin:0px;
+}
+#name {
+    margin-left:-20px;
+}
+#addResume input[type='file']{
+    width: 65%;
+    margin: 2% auto;
+    border-radius: 6px;
+    border: none;
+    background-color: #C1EDCC;
+    color: #453F3C;
+    cursor: pointer;
+}
+#pdfFileInput {
+    padding: 3%;
+}
+
+input::file-selector-button {
+    width: 50%;
+    margin: 2% auto;
+    font:inherit;
+    padding: 1%;
+    border-radius: 6px;
+    border: none;
+    background-color: #ffe9f3;
+    color: #453F3C;
+    cursor: pointer;}
+
+#addResume label {
+    color: #C1EDCC;
+    width: 20%;
 }
