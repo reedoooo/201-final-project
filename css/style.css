@@ -181,7 +181,8 @@ nav a {
 
 #addFolders input[type='text'],
 #deleteFolders input[type='text'],
-#submit-button input[type='text'],
+#submit-button1 input[type='text'],
+#submit-button2 input[type='text'],
 #confirm-button input[type='text']{
     width: 60%;
     padding: 1%;
