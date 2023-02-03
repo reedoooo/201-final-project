@@ -111,7 +111,7 @@ nav a {
 
 .folder:before {
     content: '';
-    color:#C1EDCC;
+    color: #C1EDCC;
     text-align: center;
     width: 50%;
     height: 12px;
@@ -149,17 +149,21 @@ nav a {
 
 #addFolders legend,
 #deleteFolders legend,
-#submit-button legend,
-#confirm-button legend {
+#submit-button1 legend,
+#submit-button2 legend,
+#confirm-button legend,
+#addResume legend {
     color: #C1EDCC;
-    font-size: 1rem;
+    font-size: .9rem;
     margin-bottom: 2%;
 }
 
-#addFolders #formDiv,
-#deleteFolders #formDiv,
-#submit-button #formDiv,
-#confirm-button #formDiv {
+#addFolders #formDiv1 #formDiv2 #formDiv3,
+#deleteFolders #formDiv4,
+#submit-button1 #formDiv7,
+#submit-button2 #formDiv5
+#confirm-button #formDiv0,
+#addResume #formDiv6{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -168,7 +172,8 @@ nav a {
 
 #addFolders label,
 #deleteFolders label,
-#submit-button label,
+#submit-button1 label,
+submit-button2 label,
 #confirm-button label {
     color: #C1EDCC;
     width: 15%;
@@ -176,14 +181,16 @@ nav a {
 
 #addFolders input[type='text'],
 #deleteFolders input[type='text'],
-#submit-button input[type='text'],
-#confirm-button input[type='text'] {
+#submit-button1 input[type='text'],
+#submit-button2 input[type='text'],
+#confirm-button input[type='text']{
     width: 60%;
     padding: 1%;
     border-radius: 6px;
     border: none;
     background-color: #453F3C;
     color: #C1EDCC;
+    margin-bottom: 2px;
 }
 
 #addFolders input[type='submit'],
@@ -219,6 +226,11 @@ nav a {
     color: inherit;
 }
 
+#formDiv5 {
+  width: 300px;
+  color: inherit;
+}
+
 #flex-container {
     display: flex;
     flex-grow: 1;
@@ -236,6 +248,45 @@ nav a {
     margin: 15px;
 }
 
+#formDiv6 {
+  margin: 15px;
+
 #addFolders input[type='file'] {
     width: 81.5%;
+}
+
+#label-form4 {
+    flex-grow: 1;
+    margin:0px;
+}
+#name {
+    margin-left:-20px;
+}
+#addResume input[type='file']{
+    width: 65%;
+    margin: 2% auto;
+    border-radius: 6px;
+    border: none;
+    background-color: #C1EDCC;
+    color: #453F3C;
+    cursor: pointer;
+}
+#pdfFileInput {
+    padding: 3%;
+}
+
+input::file-selector-button {
+    width: 50%;
+    margin: 2% auto;
+    font:inherit;
+    padding: 1%;
+    border-radius: 6px;
+    border: none;
+    background-color: #ffe9f3;
+    color: #453F3C;
+    cursor: pointer;}
+
+#addResume label {
+    color: #C1EDCC;
+    width: 20%;
 }

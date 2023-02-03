@@ -1,16 +1,34 @@
 let darkArray = ['#453F3C', '#C1EDCC', '#534e4c', '#797270', '#C1EDCC'];
-let lightArray = ['#ffaec0', '#000000', '#f789a1', '#f06c89', '#FFE9F3', 'rgb(121, 114, 112, .6)', '#797270', '#B27092', '#87BAAB', '#512D38', '#f6c2d9', '#62AC96','#453F3C'];
+let lightArray = ['#ffaec0', '#000000', '#f789a1', '#f06c89', '#FFE9F3', 'rgb(121, 114, 112, .6)', '#797270', '#B27092', '#87BAAB', '#512D38', '#f6c2d9', '#62AC96', '#453F3C'];
 
 function setTheme(theme) {
   if (theme === 'dark') {
     document.getElementById('body-div').style.backgroundColor = darkArray[0];
     document.getElementById('body-div').style.color = darkArray[1];
-    document.getElementById('login-form').style.backgroundColor = darkArray[3];
-    document.getElementById('login-submit').style.backgroundColor = darkArray[4];
+    console.log('test');
 
-    if (document.getElementById('formDiv')) {
-      document.getElementById('formDiv').style.color = darkArray[0];
-      document.getElementById('formDiv').style.backgroundColor = darkArray[3];
+    for (let i = 0; i < 3; i++) {
+      if (document.getElementById(`login-submit${i}`)) {
+        document.getElementById(`login-submit${i}`).style.backgroundColor = darkArray[4];
+      }
+    }
+    for (let i = 0; i < 6; i++) {
+      if (document.getElementById(`login-form${i}`)) {
+        document.getElementById(`login-form${i}`).style.backgroundColor = darkArray[3];
+      }
+    }
+    for (let i = 0; i < 9; i++) {
+      if (document.getElementById(`formDiv${i}`)) {
+        document.getElementById(`formDiv${i}`).style.backgroundColor = darkArray[3];
+        document.getElementById(`formDiv${i}`).style.color = darkArray[1];
+        console.log('test5');
+      }
+    }
+    for (let i = 0; i < 9; i++) {
+      if (document.getElementById(`label-form${i}`)) {
+        document.getElementById(`label-form${i}`).style.color = darkArray[1];
+        console.log('test5');
+      }
     }
 
     if (document.getElementById('html-id')) {
@@ -18,6 +36,7 @@ function setTheme(theme) {
     } else {
       document.getElementById('html-id').style.backgroundColor = lightArray[0];
     }
+
     if (document.getElementById('addFolders')) {
       document.getElementById('addFolders').style.backgroundColor = darkArray[3];
       document.getElementById('addFolders').style.color = darkArray[1];
@@ -45,32 +64,14 @@ function setTheme(theme) {
     }
 
   } else {
-
-    console.log('test');
-    if (document.getElementById('login-form')) {
-      document.getElementById('login-form').style.backgroundColor = lightArray[0];
-      document.getElementById('login-form').style.color = lightArray[1];
-    }
-    if (document.getElementById('login-submit')) {
-      document.getElementById('login-submit').style.backgroundColor = lightArray[4];
-    }
-
     if (document.getElementById('body-div')) {
       document.getElementById('body-div').style.backgroundColor = lightArray[8];
       document.getElementById('body-div').style.color = lightArray[1];
     }
-    // if (document.getElementById('formDiv')) {
-    //   document.getElementById('formDiv').style.backgroundColor = lightArray[2];
-    // }
-    // if (document.getElementById('name').firstElementChild) {
-    //   console.log('child');
-    //   document.getElementById('name').firstElementChild.style.backgroundColor = lightArray[1];
-    // } else if (document.getElementById('name').lastElementChild) {
-    //   document.getElementById('name').lastElementChild.style.backgroundColor = lightArray[1];
-    // }
-
-
-
+    if (document.getElementById('links-header')) {
+      document.getElementById('links-header').style.backgroundColor = lightArray[3];
+      document.getElementById('links-header').style.color = lightArray[4];
+    }
     if (document.getElementById('addFolders')) {
       document.getElementById('addFolders').style.backgroundColor = lightArray[2];
       document.getElementById('addFolders').style.color = lightArray[1];
@@ -104,9 +105,6 @@ function setTheme(theme) {
     if (document.getElementById('confirm-button')) {
       document.getElementById('confirm-button').style.backgroundColor = lightArray[4];
     }
-    // if (document.getElementById('folder')) {
-    //   document.getElementById('folder').style.backgroundColor = lightArray[2];
-    // }
 
     if (document.getElementById('html-id')) {
       document.getElementById('html-id').style.backgroundColor = lightArray[8];
@@ -114,13 +112,18 @@ function setTheme(theme) {
       document.getElementById('html-id').style.backgroundColor = darkArray[0];
     }
 
-    for (let i = 1; i < 8; i++) {
+    for (let i = 0; i < 9; i++) {
       if (document.getElementById(`label-form${i}`)) {
         document.getElementById(`label-form${i}`).style.color = lightArray[4];
         console.log('test5');
       }
     }
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 3; i++) {
+      if (document.getElementById(`login-submit${i}`)) {
+        document.getElementById(`login-submit${i}`).style.backgroundColor = lightArray[4];
+      }
+    }
+    for (let i = 0; i < 9; i++) {
       if (document.getElementById(`formDiv${i}`)) {
         document.getElementById(`formDiv${i}`).style.backgroundColor = lightArray[2];
         document.getElementById(`formDiv${i}`).style.color = lightArray[4];
@@ -133,24 +136,30 @@ function setTheme(theme) {
         console.log('test6');
       }
     }
+    for (let i = 0; i < 6; i++) {
+      if (document.getElementById(`login-form${i}`)) {
+        document.getElementById(`login-form${i}`).style.backgroundColor = lightArray[0];
+        document.getElementById(`login-form${i}`).style.color = lightArray[1];
+      }
+    }
 
     for (let i = 1; i < 9; i++) {
       if (document.getElementById(`li${i}`)) {
         document.getElementById(`li${i}`).style.color = lightArray[4];
       }
     }
-    for (let i = 1; i < 3; i++) {
+    for (let i = 0; i < 9; i++) {
+      if (document.getElementById(`links-list${i}`)) {
+        document.getElementById(`links-list${i}`).style.backgroundColor = lightArray[0];
+        document.getElementById(`links-list${i}`).style.color = lightArray[4];
+      }
+    }
+    for (let i = 0; i < 3; i++) {
       if (document.getElementById(`submit-button${i}`)) {
         document.getElementById(`submit-button${i}`).style.backgroundColor = lightArray[2];
         document.getElementById(`submit-button${i}`).style.color = lightArray[12];
       }
     }
-    // for (let i = 1; i < 10; i++) {
-    //   if (document.getElementsByClassName(`folder${i}`)) {
-    //     document.getElementsByClassName(`folder${i}`).style.backgroundColor = lightArray[4];
-    //   }
-
-    // }
 
     for (let i = 0; i < 6; i++) {
       if (document.getElementById(`legend-div${i}`)) {
@@ -170,13 +179,6 @@ function setTheme(theme) {
       }
     }
 
-    // for (let i = 0; i < 3; i++) {
-    //   if (document.getElementById(`name${i}`)) {
-    //     document.getElementById(`name${i}`).style.backgroundColor = lightArray[1];
-    //     console.log('test7');
-    //   }
-    // }
-
   }
 
   localStorage.setItem('theme', theme);
@@ -184,12 +186,16 @@ function setTheme(theme) {
 (function () {
   'use strict';
 
-  let formSubmit = '';
+  let formSubmit1 = '';
+  let formSubmit2 = '';
 
   if (document.getElementById('submit-button1')) {
-    formSubmit = document.getElementById('submit-button1');
-  } else {
-    formSubmit = document.getElementById('submit-button2');
+    formSubmit1 = document.getElementById('submit-button1');
+
+  }
+  if (document.getElementById('submit-button2')) {
+    formSubmit2 = document.getElementById('submit-button2');
+
   }
 
   let confirmInfo = document.getElementById('confirm-button');
@@ -197,8 +203,21 @@ function setTheme(theme) {
   let logIn = function (event) {
     event.preventDefault();
 
-    let inputLightTheme = document.querySelector('input[name="form"][value="light"]').checked;
-    let inputDarkTheme = document.querySelector('input[name="form"][value="dark"]').checked;
+    let inputLightTheme = '';
+    if (document.querySelector('input[name="form1"][value="light1"]')) {
+      inputLightTheme = document.querySelector('input[name="form1"][value="light1"]').checked;
+    } else if (document.querySelector('input[name="form2"][value="light2"]')) {
+      inputLightTheme = document.querySelector('input[name="form2"][value="light2"]').checked;
+      console.log('dark theme');
+    }
+
+    let inputDarkTheme = '';
+    if (document.querySelector('input[name="form1"][value="dark1"]')) {
+      inputDarkTheme = document.querySelector('input[name="form1"][value="dark1"]').checked;
+    } else if (document.querySelector('input[name="form2"][value="dark2"]')) {
+      inputDarkTheme = document.querySelector('input[name="form2"][value="dark2"]').checked;
+      console.log('dark theme');
+    }
 
     if (inputDarkTheme) {
       setTheme('dark');
@@ -206,12 +225,21 @@ function setTheme(theme) {
       setTheme('light');
     }
   };
-  if (formSubmit) {
-    formSubmit.addEventListener('submit', logIn);
+  // if (formSubmit) {
+  //   formSubmit.addEventListener('submit', logIn);
+  // }
+  if (formSubmit1) {
+    formSubmit1.addEventListener('submit', logIn);
+    console.log('setTheme');
+  }
+  if (formSubmit2) {
+    formSubmit2.addEventListener('submit', logIn);
+    console.log('setTheme');
   }
 
 
   window.addEventListener('load', function () {
+
     let savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       setTheme(savedTheme);
