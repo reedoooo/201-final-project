@@ -4,7 +4,8 @@ let allFiles = [];
 
 function File(fileName, fileSRC) {
   this.name = fileName;
-  this.src = fileSRC.replace(/^.*\\/, "");
+  this.src = fileSRC.replace(/^.*\\/, '') + fileName;
+
 
   // this.src = '/web/viewer.html?file=' + fileName + '.' + fileSRC; //img/itemName.fileExtension
 
@@ -46,12 +47,17 @@ function createNewFile(event) {
 
   let files = event.target.files;
   let inputOne = '';
+  let inputTwo = '';
 
   for (const file of files) {
     inputOne = file.name;
+    inputTwo = event.target.value;
+
+    console.log(inputOne);
+    console.log(file);
+
   }
 
-  let inputTwo = event.target.value;
 
   let newFileValues = new File(inputOne, inputTwo);
 

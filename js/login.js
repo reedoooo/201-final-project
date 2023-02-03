@@ -134,7 +134,7 @@ function setTheme(theme) {
       }
     }
 
-    for (let i = 1; i < 20; i++) {
+    for (let i = 1; i < 9; i++) {
       if (document.getElementById(`li${i}`)) {
         document.getElementById(`li${i}`).style.color = lightArray[4];
       }
