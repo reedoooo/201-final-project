@@ -2,6 +2,10 @@
     font-size: 1.35rem;
 }
 
+aside {
+    font-size: 1rem;
+}
+
 #todoContainer {
     display: flex;
     justify-content: space-around;

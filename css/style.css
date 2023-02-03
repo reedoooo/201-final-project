@@ -105,7 +105,7 @@ nav a {
     border-radius: 0 6px 6px 6px;
     border: none;
     box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.59);
-    color:#C1EDCC;
+    /* color:#C1EDCC; */
     font-size: 1.25rem;
 }
 
@@ -138,7 +138,9 @@ nav a {
 
 #addFolders,
 #deleteFolders,
-#submit-button {
+#submit-button1,
+#submit-button2,
+#addResume {
     width: 90%;
     margin: 5% auto;
     background-color: #797270;
@@ -161,9 +163,9 @@ nav a {
 #addFolders #formDiv1 #formDiv2 #formDiv3,
 #deleteFolders #formDiv4,
 #submit-button1 #formDiv7,
-#submit-button2 #formDiv5
+#submit-button2 #formDiv5,
 #confirm-button #formDiv0,
-#addResume #formDiv6{
+#addResume #formDiv6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,7 +175,7 @@ nav a {
 #addFolders label,
 #deleteFolders label,
 #submit-button1 label,
-submit-button2 label,
+#submit-button2 label,
 #confirm-button label {
     color: #C1EDCC;
     width: 15%;
@@ -195,7 +197,8 @@ submit-button2 label,
 
 #addFolders input[type='submit'],
 #deleteFolders input[type='submit'],
-#submit-button input[type='submit'],
+#submit-button1 input[type='submit'],
+#submit-button2 input[type='submit'],
 #confirm-button input[type='click'] {
     width: 40%;
     margin: 2% auto;
@@ -250,6 +253,7 @@ submit-button2 label,
 
 #formDiv6 {
   margin: 15px;
+}
 
 #addFolders input[type='file'] {
     width: 81.5%;
