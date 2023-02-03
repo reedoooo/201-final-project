@@ -37,9 +37,10 @@ function clearNoteButtonContainer () {
 
 // renders note onto screen 
 function renderNote (event) {
-    let textAreaEl = document.getElementById('noteText');
+    let textAreaEl = document.querySelector('textarea');
     let titleEl = document.getElementById('noteTitle');
 
+    textAreaEl.innerText = '';
     console.log(state.notes[event.target.id].title, state.notes[event.target.id].text)
     titleEl.value = state.notes[event.target.id].title;
     textAreaEl.innerText = state.notes[event.target.id].text;

@@ -1,4 +1,4 @@
-# resume-ready
+# Personal Portfolio Project
 The final project in Code 201 for Codefellows.
 
 ## Authors / Team: 
@@ -28,10 +28,31 @@ As a self-taught software developer, I’d like the app to have my projects avai
 ## Portfolio Project
 Our goal is to create an all-in-one portfolio presentation app for software developers &/o any tech industry roles. We wanted to create an app that could host all of a developers projects and also display them side by side so that you can see what was created and how it was made. We also want to give the user the ability to create and store notes so that they can refer to them at any given time and have it all located in one convenient location. Additionally, our goals with this app include giving the user personalization options such as adjusting the color schemes, adding folder images, and the ability to add favorited projects.
 
-### Features
+## Features
+
+### Light / Dark Mode
+Users can select which color theme they prefer through `login.html` and the theme will persist on all pages. 'Light' or 'Dark' is saved in local storage and whenever a page is loaded or refreshed that value is read and then the `setTheme()` function is called.
 
 ### Upload A Project
+Users are able to upload a project to the app and display both the deployed page and the files that were used to create it. In order to upload a project the user will need to fill three inputs in the side bar, the `Title` of the project, the `URL` of the deployed page, and then the `Project Folder` itself, and then click the `Add Project` button. When a project is uploaded the files will be parsed and only the `.js`, `.html`, and `.css` files will remain since these are the 'meat' of the project. A new 'folder' button will also appear at the top of the screen and when a user clicks on a specified project button a deployed page and one of the remaining files will be displayed on the screen side-by-side. A list of buttons will also appear on the bottom of the side bar which correspond to each of the parsed files from that project and the user can click on each button to view the contents of each file. Each project is saved to `state.projects` which is then saved to local storage and will persist through new pages being loaded or page refreshes.
 
+### Resume
+Users would be able to upload a `.pdf` of their resume but unfortunately it does not work at this time.
+
+### Take Notes
+Users are able to create, save, and delete notes on this page. These notes are saved to `state.notes` and then persists through local storage.
+
+### To-Do List
+Users are able to create 'To-Do' lists. Each 'To-Do' list has a title and list of tasks to be completed which can then be checked off once they are finished. Clearing a list of completed tasks and deleting a whole list were features that we planned on implementing but were unable to finish in time.
+
+### Coding Resources
+Users can browse various useful coding resources &/o documentation here.
+
+### Bored Button
+Is a user waiting for someone on their team to finish making a commit, or a pull request, or get back from lunch, etc before they're able to continue working on a project? Users can now visit `boredbutton.com` while still in this app to help kill time!
+
+### About Us
+-unfinished-
 
 
 ## Reflections and Comments
