@@ -61,7 +61,7 @@ function createProjectFilesNavButtons(event) {
   let containerEl = document.getElementById('projectFileNavContainer');
   let titleEl = document.createElement('h4');
 
-  for (let i = 0; i < containerEl.childNodes.length; i++) {
+  for (let i = 0; containerEl.childNodes.length > 0; i++) {
     containerEl.removeChild(containerEl.lastChild);
   }
 

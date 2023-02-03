@@ -1,8 +1,8 @@
 #iframebox{
    display: flex;
    /* flex-direction: column; */
-   height: 85vh;
-   justify-content: space-evenly;
+   height: 82vh;
+   justify-content: space-around;
    padding: 10px;
    border-top: 1px solid white;
    margin-top: 1rem;
@@ -10,7 +10,8 @@
 }
 
 iframe{
-   width: 48%;
+   width: 68%;
+   height: 100%;
 }
 
 #boredButtonIframeBox{
@@ -28,8 +29,8 @@ iframe{
  #textblob {
    white-space: pre-wrap;
    overflow-y: auto;
-   height: 85vh;
-   width: 48%;
+   height: 100%;
+   width: 28%;
    font-size: 0.9rem;
    color: #C1EDCC;
 }
@@ -38,6 +39,7 @@ iframe{
    border-top: .1rem solid ivory;
    display: flex;
    flex-direction: column;
+   /* overflow-y: scroll; */
 }
 
 #projectFileNavContainer button {
@@ -48,6 +50,6 @@ iframe{
 h4 {
    color: #C1EDCC;
    text-align: center;
-   font-weight: 700;
+   font-weight: 500;
    margin: 10px 5px;
 }

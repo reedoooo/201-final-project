@@ -18,9 +18,9 @@ function Task(name, list = []) {
 function displayTaskList(event){
     // if(listEl.childNodes.length);
     for (let i = 0; listEl.children.length > 0; i++){ 
-        console.log(listEl.children.length);
+        // console.log(listEl.children.length);
         listEl.removeChild(listEl.lastChild);
-        console.log(listEl.children.length);
+        // console.log(listEl.children.length);
     };
     taskArr.forEach(element => {
         if (element.name === event.target.innerText){
