@@ -5,8 +5,10 @@ The final project in Code 201 for Codefellows.
 Reed Vogt, Jason Adams, Kawika Miller
 
 ## Project Management: 
-Trello team board: https://trello.com/b/OYsMAaqG/simple-project-board
-Invision Board: https://kawikamiller572326.invisionapp.com/freehand/201-Final-kstcVEpib
+Trello team board: 
+https://trello.com/b/OYsMAaqG/simple-project-board
+Invision Board: 
+https://kawikamiller572326.invisionapp.com/freehand/201-Final-kstcVEpib
 
 ## User Stories
 
